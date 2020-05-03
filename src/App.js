@@ -1,4 +1,9 @@
 import React from 'react'; 
+import {connect} from 'react-redux';
+
+const mapStateToProps = state => ({
+  appName: state.appName
+})
 
 class App extends React.Component {
     constructor() {
@@ -30,3 +35,5 @@ class App extends React.Component {
     );
   }
 }
+
+export default connect(mapStateToProps, () => ({}) )(App);
