@@ -13,7 +13,10 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "redux": "^3.6.0",
+ dependabot/npm_and_yarn/superagent-5.2.2
     "superagent": "^5.2.2",
+
+    "superagent": ">=3.7.0",
     "superagent-promise": "^1.1.0"
   },
   "scripts": {
