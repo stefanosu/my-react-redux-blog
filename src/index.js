@@ -1,20 +1,18 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import {createStore} from 'redux';
 import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import App from './App';
 
-
-  const store = createStore(reducer);
 
   const defaultState = {
-    checked: false,
     appName: 'conduit',
     articles: null
     };
 
   const reducer = function(state = defaultState, action) {
       return state;
-    };
+    }
 
   const store = createStore(reducer) 
 
