@@ -12,7 +12,11 @@ import { promiseMiddleware } from './middleware';
     };
 
   const reducer = function(state = defaultState, action) {
-      return state;
+    switch(action.type) {
+      case 'HOME_PAGE_LOADED':
+        return { ...state, articles: action.payload.articles }
+      }
+      return state
     }
 
   const store = createStore(reducer, applyMiddleware(promiseMiddleware));
