@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
 import App from './components/App';
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, createStore, compose } from 'redux';
 import { promiseMiddleware } from './middleware';
 
 
@@ -19,7 +19,9 @@ import { promiseMiddleware } from './middleware';
       return state
     }
 
-  const store = createStore(reducer, applyMiddleware(promiseMiddleware));
+  const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__|| compose; 
+
+  const store = createStore(reducer, composeEnhancer(applyMiddleware(promiseMiddleware)));
 
 
 ReactDOM.render((

@@ -2,6 +2,7 @@ import Banner from './Banner';
 import MainView from './MainView';
 import React from 'react';
 import { connect } from 'react-redux';
+import agent from '../../agent';
 
 const Promise = global.Promise
 
@@ -15,6 +16,11 @@ const mapDispatchToProps = dispatch => ({
 })
 
 class Home extends React.Component {
+
+  componentWillMount() {
+    this.props.onLoad(agent.Articles.all())
+  }
+
   render() {
     return (
       <div className="home-page">
