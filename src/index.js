@@ -1,10 +1,9 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 import App from './components/App';
-import { promiseMiddleWare } from './middleware';
-import { applyMiddleware } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import { promiseMiddleware } from './middleware';
 
 
   const defaultState = {
@@ -16,7 +15,8 @@ import { applyMiddleware } from 'redux';
       return state;
     }
 
-  const store = createStore(reducer, applyMiddleware(promiseMiddleWare)) 
+  const store = createStore(reducer, applyMiddleware(promiseMiddleware));
+
 
 ReactDOM.render((
   <Provider store={store}> 
