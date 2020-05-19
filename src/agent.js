@@ -21,6 +21,8 @@ const Articles = {
 };
 
 const Auth = {
+  current: () => 
+    requests.get('/user'),
   login: (email, password) => {
     requests.post('/users/login', { user: { email, password } })
   }
@@ -28,5 +30,6 @@ const Auth = {
 
 export default {
   Articles,
-  Auth
+  Auth,
+  setToken: _token => {token = _token}
 };
