@@ -13,9 +13,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onLoad: (payload, token) => 
-    dispatch({ type: 'APP_LOAD', payload, token}), 
+    dispatch({ type: 'APP_LOAD', payload, token }), 
   onRedirectTo: () => {
-    dispatch({type: 'REDIRECT'})
+    dispatch({ type: 'REDIRECT' })
   }
 }) 
 
