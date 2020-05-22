@@ -9,7 +9,7 @@ const responseBody = res => res.body;
 
 const requests = {
   get: url =>
-    superagent.get(`${API_ROOT}${url}`).then(responseBody), 
+    superagent.get(`${API_ROOT}${url}`).then(responseBody),  
 
   post: (url, body) => 
     superagent.post(`${API_ROOT}${url}`, body).then(responseBody)
@@ -31,6 +31,6 @@ const Auth = {
 export default {
   Articles,
   Auth,
-  setToken: _token => { token = _token; }
+  // setToken: _token => { token = _token; }
 };
 
