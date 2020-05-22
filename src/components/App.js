@@ -1,7 +1,7 @@
 import React from 'react'; 
 import Header from './Header';
 import Home from './Home'
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import agent from '../agent';
 
 
@@ -37,7 +37,9 @@ class App extends React.Component {
   render() {
     return (
         <div>
-            <Header appName={this.props.appName}/>
+            <Header
+            currentUser={this.props.currentUser}
+            appName={this.props.appName}/>
             {this.props.children}
           </div>
         
