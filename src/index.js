@@ -10,7 +10,6 @@ import Register from './components/Register'
 
 
 
-
 ReactDOM.render((
   <Provider store={store}>
     <Router history={hashHistory}> 
