@@ -18,7 +18,7 @@ const requests = {
 const Articles = {
   all: page =>
     requests.get(`/articles?limit=10`)
-};
+};  
 
 const Auth = {
   current: () => 
