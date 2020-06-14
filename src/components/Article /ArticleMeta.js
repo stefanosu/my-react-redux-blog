@@ -18,7 +18,6 @@ const ArticleMeta = props => {
           {new Date(article.createdAt).toDateString()}
         </span>
       </div>
-
       <ArticleActions canModify={props.canModify} article={article} />
     </div>
   );
