@@ -1,5 +1,6 @@
 import superagentPromise from 'superagent-promise';
 import _superagent from 'superagent';
+import request from 'superagent';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
@@ -8,16 +9,25 @@ const API_ROOT = 'https://conduit.productionready.io/api';
 const responseBody = res => res.body;
 
 const requests = {
+
+  del: url => 
+  superagent.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody), 
+
   get: url =>
     superagent.get(`${API_ROOT}${url}`).then(responseBody),  
 
   post: (url, body) => 
-    superagent.post(`${API_ROOT}${url}`, body).then(responseBody)
-};
+    superagent.post(`${API_ROOT}${url}`, body).then(responseBody), 
+
+  put: (url, body) => 
+  superagent.put(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)};
+
 
 const Articles = {
   all: page =>
     requests.get(`/articles?limit=10`), 
+  del: slug => 
+    request.del(`/articles/${slug}`),
   get: slug => 
     requests.get(`/articles/${slug}`) 
 };  
