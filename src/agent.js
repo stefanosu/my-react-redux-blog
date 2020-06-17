@@ -11,7 +11,7 @@ const responseBody = res => res.body;
 const requests = {
 
   del: url => 
-  superagent.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody), 
+  superagent.del(`${API_ROOT}${url}`).use().then(responseBody), 
 
   get: url =>
     superagent.get(`${API_ROOT}${url}`).then(responseBody),  
@@ -20,8 +20,7 @@ const requests = {
     superagent.post(`${API_ROOT}${url}`, body).then(responseBody), 
 
   put: (url, body) => 
-  superagent.put(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)};
-
+  superagent.put(`${API_ROOT}${url}`, body).use().then(responseBody)};
 
 const Articles = {
   all: page =>
