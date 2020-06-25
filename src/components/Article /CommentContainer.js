@@ -27,7 +27,7 @@ const CommentContainer = props => {
         <Link to="register">sign up</Link>
         &nbsp;to add comments on this article.
       </p>
-
+      
       <CommentList
         comments={props.comments}
         slug={props.slug}
