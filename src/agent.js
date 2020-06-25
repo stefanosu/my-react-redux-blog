@@ -46,8 +46,11 @@ const Auth = {
 }
 
 const Comments = {
+  create: (slug, comment) =>  
+    request.post(`/articles/${slug}/comments`, {comment}),
   forArticle: slug => 
     requests.get(`articles/${slug}/comments`)
+  
 }
 
 export default {
