@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const ArticlePreview = (props) => {
   const article = props.article
