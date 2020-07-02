@@ -22,14 +22,17 @@ const requests = {
   put: (url, body) => 
   superagent.put(`${API_ROOT}${url}`, body).use().then(responseBody)};
 
+
 const Articles = {
   all: page =>
-    requests.get(`/articles?limit=10`), 
-  del: slug => 
-    request.del(`/articles/${slug}`),
-  get: slug => 
-    requests.get(`/articles/${slug}`) 
-};  
+    requests.get(`/articles?limit=10`),
+  byAuthor: (author, page) =>
+    requests.get(`/articles?author=${encodeURIComponent(author)}&limit=5`),
+  del: slug =>
+    requests.del(`/articles/${slug}`),
+  get: slug =>
+    requests.get(`/articles/${slug}`)
+};
 
 const Auth = {
   current: () => 
@@ -55,18 +58,6 @@ const Comments = {
   
 }
 
-const Articles = {
-  all: page =>
-    requests.get(`/articles?limit=10`),
-  byAuthor: (author, page) =>
-    requests.get(`/articles?author=${encodeURIComponent(author)}&limit=5`),
-  del: slug =>
-    requests.del(`/articles/${slug}`),
-  get: slug =>
-    requests.get(`/articles/${slug}`)
-};
-
-// ...
 
 const Profile = {
   follow: username =>
