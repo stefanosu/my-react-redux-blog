@@ -55,10 +55,34 @@ const Comments = {
   
 }
 
+const Articles = {
+  all: page =>
+    requests.get(`/articles?limit=10`),
+  byAuthor: (author, page) =>
+    requests.get(`/articles?author=${encodeURIComponent(author)}&limit=5`),
+  del: slug =>
+    requests.del(`/articles/${slug}`),
+  get: slug =>
+    requests.get(`/articles/${slug}`)
+};
+
+// ...
+
+const Profile = {
+  follow: username =>
+    requests.post(`/profiles/${username}/follow`),
+  get: username =>
+    requests.get(`/profiles/${username}`),
+  unfollow: username =>
+    requests.del(`/profiles/${username}/follow`)
+};
+
+
 export default {
   Articles,
   Auth,
-  Comments
+  Comments,
+  Profile
   // setToken: _token => { token = _token; }
 };
 
