@@ -5,6 +5,8 @@ import common from './reducers/common'
 import home from './reducers/home'
 import settings from './reducers/settings';
 import article from './reducers/article';
+import profile from './reducers/profile';
+import articleList from './reducers/articleList';
 
 
   const reducer = combineReducers({
@@ -12,7 +14,9 @@ import article from './reducers/article';
     common,
     home,
     settings,
-    article  
+    article,
+    profile,
+    articleList
   })
 
   const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__|| compose; 
