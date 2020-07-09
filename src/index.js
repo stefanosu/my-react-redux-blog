@@ -8,7 +8,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Register from './components/Register'
 import Settings from './components/Settings';
-
+import Profile from './components/Profile';
 
 
 ReactDOM.render((
