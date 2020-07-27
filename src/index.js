@@ -9,7 +9,7 @@ import Login from './components/Login'
 import Register from './components/Register'
 import Settings from './components/Settings';
 import Profile from './components/Profile';
-// import Article from './components/Article'
+import Article from './components/Article'
 
 
 
