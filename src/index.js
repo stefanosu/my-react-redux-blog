@@ -9,6 +9,8 @@ import Login from './components/Login'
 import Register from './components/Register'
 import Settings from './components/Settings';
 import Profile from './components/Profile';
+// import Article from './components/Article'
+
 
 
 ReactDOM.render((
@@ -19,9 +21,9 @@ ReactDOM.render((
       <Route path="login" component={Login} />
       <Route path="register" component={Register}/> 
       <Route path="settings" component={Settings}/> 
-      <Route path="article/:id" component={Article}/>
       <Route path="@:username" component={Profile}/> 
+      <Route path="article/:id" component={Article}/>
       </Route>
-    </Router>
-  </Provider>
-), document.getElementById('root'));
+      </Router>
+      </Provider>
+      ), document.getElementById('root'));
