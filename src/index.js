@@ -24,6 +24,6 @@ ReactDOM.render((
       <Route path="@:username" component={Profile}/> 
       <Route path="article/:id" component={Article}/>
       </Route>
-      </Router>
-      </Provider>
+    </Router>
+  </Provider>
       ), document.getElementById('root'));
