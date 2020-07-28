@@ -3,8 +3,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 import ArticleMeta from './ArticleMeta' 
-import ComponentContainer from './ComponentContainer';
-import agent from '../../agent';
+import CommentContainer from './CommentContainer';
+import agent from '../agent';
 import { connect } from 'react-redux'; 
 import marked from './marked';
 
