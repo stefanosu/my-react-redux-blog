@@ -75,7 +75,7 @@ export default {
   Articles,
   Auth,
   Comments,
-  Profile
+  Profile,
   // setToken: _token => { token = _token; }
 };
 
