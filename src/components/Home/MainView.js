@@ -11,7 +11,7 @@ const YourFeedTab = props => {
       props.onTabClick('feed', agent.Articles.feed());
     }
 
-    return (
+    return (  
       <li className="nav-item">
         <a  href=""
             className={ props.tab === 'feed' ? 'nav-link active' : 'nav-link' }
