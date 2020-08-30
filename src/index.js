@@ -7,6 +7,7 @@ import App from './components/App';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
+import Profile from './components/Profile';
 import Settings from './components/Settings';
 import store from './store';
 
@@ -15,12 +16,14 @@ ReactDOM.render((
     <Router history={hashHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
-        <Route path="login" component={Login} />
-        <Route path="register" component={Register} />
-        <Route path="settings" component={Settings} />
+          <Route path="login" component={Login} />
+          <Route path="register" component={Register} />
+          <Route path="settings" component={Settings} />
+          <Route path="@:username" component={Profile} />
       </Route>
     </Router>
   </Provider>
         ), document.getElementById('main'));
+        
         
         // <Route path="article/:id" component={Article} />
