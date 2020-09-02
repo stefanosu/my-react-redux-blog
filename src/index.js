@@ -25,5 +25,4 @@ ReactDOM.render((
   </Provider>
         ), document.getElementById('main'));
         
-        
         // <Route path="article/:id" component={Article} />
